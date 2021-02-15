@@ -146,8 +146,8 @@ var age = 18;
 //Loops in JavaScript
 var arr = [1, 2, 3, 4, 5, 6, 7];
 // console.log(arr);
-for(var i=0; i<arr.length; i++){
-    if(i==2){
+for (var i = 0; i < arr.length; i++) {
+    if (i == 2) {
         // break;
         continue;
     }
@@ -172,6 +172,72 @@ for(var i=0; i<arr.length; i++){
 //     console.log(arr[j]);
 //     j++;
 // } while (j < arr.length);
+
+// Array Methods
+let myArr = ["Tausif", "Khan", 2, , null, true];
+
+// console.log(myArr.length);
+// myArr.pop();
+// myArr.push(2);
+// myArr.shift();
+// myArr.unshift("abc");
+// const newLen = myArr.unshift("abc");
+// console.log(newLen);
+// console.log(myArr);
+
+// String Methods
+let myString = "Tausif is a good boy good good Tausif";
+// console.log(myString.length);
+// console.log(myString.indexOf("good"));
+// console.log(myString.lastIndexOf("good"));
+// console.log(myString.slice(1,3));
+// let d = myString.replace("Tausif","Rehan"); //only first occurrence will replace
+// d = d.replace("good", "bad");
+// console.log(d, myString);
+
+// Dates
+// let myDate = new Date();
+// console.log(myDate);
+// console.log(myDate.getFullYear());
+// console.log(myDate.getDate());
+// console.log(myDate.getDay());
+// console.log(myDate.getTime());
+// console.log(myDate.getHours());
+// console.log(myDate.getMinutes());
+
+// DOM Manipulation
+let elem = document.getElementById('click');
+// console.log(elem);
+
+let elemClass = document.getElementsByClassName('container');
+// console.log(elemClass);
+// elemClass[0].style.background = 'yellow';
+elemClass[0].classList.add('bg-primary');
+elemClass[0].classList.add('text-success');
+// console.log(elem.innerHTML);
+// console.log(elem.innerText);
+
+// console.log(elemClass[0].innerHTML);
+// console.log(elemClass[0].innerText);
+
+let tagName = document.getElementsByTagName('div');
+// console.log(tagName);
+
+let createdElement = document.createElement('p');
+createdElement.innerText = "hello a new paragraph created";
+tagName[0].appendChild(createdElement);
+
+let createdElement2 = document.createElement('b');
+createdElement2.innerText = "hello a bold created";
+tagName[0].replaceChild(createdElement2, createdElement);
+tagName[0].removeChild(createdElement2); // removes an element
+
+// Selecting using Query
+let selector = document.querySelector('.container');
+// console.log(selector);
+let selectorAll = document.querySelectorAll('.container');
+// console.log(selectorAll);
+
 
 
 
