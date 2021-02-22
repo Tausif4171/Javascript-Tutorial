@@ -239,9 +239,80 @@ let selectorAll = document.querySelectorAll('.container');
 // console.log(selectorAll);
 
 
+// Events in Javascript
+
+// function clicked(){
+//     console.log("The button was clicked:D");
+// }
+
+// window.onload = function(){
+//     console.log("The document was loaded");
+// }
+
+// firstContainer.addEventListener('click', function(){
+//     document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked </b>"
+//     console.log('Clicked on container');
+// })
+
+// firstContainer.addEventListener('mouseover', function(){
+//     console.log('Mouse on container');
+// })
+
+// firstContainer.addEventListener('mouseout', function(){
+//     console.log('Mouse out of container');
+// })
+
+let prevHTML = document.querySelectorAll('.container')[1].innerHTML;
+
+firstContainer.addEventListener('mouseup', function () {
+    document.querySelectorAll('.container')[1].innerHTML = prevHTML;
+    console.log('Mouse up when Clicked on container');
+})
+
+firstContainer.addEventListener('mousedown', function () {
+    document.querySelectorAll('.container')[1].innerHTML = "<b> We have clicked </b>"
+    console.log('Mouse down when Clicked on container');
+})
 
 
+//Arrow functions
+// function summ(a, b) {
+//     return a + b;
+// }
+summ = (a, b) => {
+    return a + b;
+}
 
+logkaro = () => {
+    document.querySelectorAll('.container')[1].innerHTML = "<b> Set Timeout fired </b>"
+    console.log("I am your log");
+}
+
+// SetTimeout and SetInterval in Javascript
+// clr = setTimeout(logkaro, 5000);
+// clr = setInterval(logkaro, 2000);
+// use clearInterval(clr)/clearTimeout(clr) to cancel setInterval/setTimeout
+
+// JavaScript localStorage
+// localStorage.setItem("Name","Tausif")
+// localStorage
+// localStorage.getItem("Name")
+// localStorage.removeItem("Name")
+// localStorage.clear()
+
+
+// JSON - object to string / string to object hota hai...
+obj = { name: "Tausif", length: 1, a: { this: 'that' } }
+jso = JSON.stringify(obj);
+console.log(typeof jso);
+console.log(jso);
+
+parsed = JSON.parse(`{"name":"Tausif","length":1,"a":{"this":"that"}}`)
+console.log(parsed);
+
+// Template literals - Backticks
+a = "Tausif";
+console.log(`Hello ${a}`)
 
 
 
