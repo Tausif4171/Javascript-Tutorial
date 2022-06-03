@@ -17,7 +17,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Clockiy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -57,20 +57,22 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container my-4">
         <h4>India</h4>
         <p id="show"></p>
     </div>
 
     <script>
 
-        setInterval(() => {
+        const clock = () => {
             let a = new Date();
             const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
             let date = a.toLocaleDateString('en-us', options);
             let time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
             document.getElementById('show').innerHTML = " Current time is : " + time + " On " + date;
-        }, 1000);
+        }
+
+        setInterval(clock, 1000);
 
     </script>
 
